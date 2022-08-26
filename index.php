@@ -1,5 +1,7 @@
 <?php
- $db = new PDO("mysql:host=localhost;dbname=pengiriman",'root','');
+include "koneksi.php";
+ $koneksi = new koneksi();
+ $db = $koneksi->getKoneksi();
  $query = $db->query('select * from kurir');
 
  while ($data = $query->fetch() ) :?>
